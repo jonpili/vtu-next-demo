@@ -1,8 +1,8 @@
 <template>
   <div>
-    Vue app
-    <Hello @greet="increment" />
-    Count: {{ count }}
+    <h2>Vue 3 + TypeScript + Jest</h2>
+    <Hello @say="say" />
+    Message: {{ msg }}
   </div>
 </template>
 
@@ -12,20 +12,17 @@ import Hello from './Hello.vue'
 
 export default defineComponent({
   name: 'App',
-
   components: {
     Hello
   },
-
   data() {
     return {
-      count: 0
+      msg: ''
     }
   },
-
   methods: {
-    increment() {
-      this.count += 1
+    say() {
+      this.msg = 'わーい'
     }
   }
 })
